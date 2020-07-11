@@ -1,0 +1,30 @@
+{
+  "name": "vuttr-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__"
+  },
+  "author": "Brenda Martins <brendamichele16@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.0"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.0",
+    "supertest": "^4.0.2"
+  }
+}
